@@ -12,7 +12,7 @@ contract Level1Script is Script {
         target = payable(0x088a87a38098230D078dCC12d3ba315B84f05EC0);
         vm.startBroadcast();
         IFallback(target).contribute{value: 0.0001 ether}();
-        (bool success, ) = target.call{value: 0.0001 ether}("");
+        (bool success,) = target.call{value: 0.0001 ether}("");
         if (!success) {
             revert TransferFailed();
         }

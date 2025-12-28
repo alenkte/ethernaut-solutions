@@ -104,7 +104,7 @@ contract Solver {
     ///////////////////
     function solve() external payable {
         IFallback(target).contribute{value: 0.0001 ether}();
-        (bool success, ) = target.call{value: 0.0001 ether}("");
+        (bool success,) = target.call{value: 0.0001 ether}("");
         if (!success) {
             revert TransferFailed();
         }
@@ -116,9 +116,7 @@ contract Solver {
     }
 
     function withdrawforonwer() external onlyOwner {
-        (bool success, ) = payable(owner).call{value: address(this).balance}(
-            ""
-        );
+        (bool success,) = payable(owner).call{value: address(this).balance}("");
         if (!success) {
             revert TransferFailed();
         }
