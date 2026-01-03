@@ -3,17 +3,18 @@ pragma solidity ^0.8.0;
 import {Test, console} from "forge-std/Test.sol";
 import {HackCoinFlip, CoinFlip} from "../src/level3.sol";
 
-contract level2Test is Test {
+contract level3Test is Test {
     CoinFlip target;
 
     function setUp() public {
-        // vm.createSelectFork("SEPOLIA");
-        target = CoinFlip(0xEdd15341D01cB5D24a62Cc8CEaDbF174114cEd46);
+        vm.createSelectFork("SEPOLIA");
+        address instanceAddress = vm.envAddress("INSTANCE_AD");
+        target = CoinFlip(instanceAddress);
     }
 
-    function testSolvesLevel() public {
-        CoinFlip level = new CoinFlip();
-        HackCoinFlip hackContract = new HackCoinFlip(address(level));
+    function testSolvesLeve3() public {
+        CoinFlip leve3 = new CoinFlip();
+        HackCoinFlip hackContract = new HackCoinFlip(address(leve3));
 
         for (uint256 i = 0; i < 10; i++) {
             //we need the cheatcode to change the block number and trigger the hack ten times in ten blocks
@@ -21,7 +22,6 @@ contract level2Test is Test {
 
             hackContract.hack();
         }
-
-        assertTrue(level.consecutiveWins() == 10);
+        assertTrue(leve3.consecutiveWins() == 10);
     }
 }
