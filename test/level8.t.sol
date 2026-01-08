@@ -12,7 +12,6 @@ contract level8Test is Test {
         vm.createSelectFork("SEPOLIA");
         address instanceAddress = vm.envAddress("INSTANCE_AD");
         target = Vault(instanceAddress);
-        // 读取 slot 1 中的 password 值
         password = vm.load(address(target), bytes32(uint256(1)));
         console.logBytes32(password);
     }
