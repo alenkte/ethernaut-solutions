@@ -33,4 +33,4 @@ contract Level19Script is Script {
         console.log("Attack successful: ", ownerAfter == hacker);
     }
 }
-//forge script script/level19.s.sol:Level19Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account mytestkey --sig "run(address,address)" 0x77589e7EAEf016A48225D99d1aec26D69444a0Ad 0x0ADf707838CDc0aBd5Cc361A9C680CEe4487F148
+//forge script script/level19.s.sol:Level19Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account yourkey --sig "run(address,address)" your instance address your wallet address
