@@ -10,6 +10,7 @@ on:
 
 env:
   FOUNDRY_PROFILE: ci
+  SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
 
 jobs:
   check:
@@ -34,4 +35,5 @@ jobs:
         run: forge build --sizes
 
       - name: Run Forge tests
-        run: forge test -vvv
+        run: forge test --match-path 'test/*' -vvv
+
