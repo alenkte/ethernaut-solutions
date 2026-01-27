@@ -31,10 +31,7 @@ contract Level20Script is Script {
 
         address partnerAfter = target.partner();
         console.log("Partner after: ", partnerAfter);
-        console.log(
-            "Attack successful: ",
-            partnerAfter == address(hackContract)
-        );
+        console.log("Attack successful: ", partnerAfter == address(hackContract));
     }
 }
 //forge script script/level20.s.sol:Level20Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account mytestkey --sig "run(address)" 0xb61f80157D71C278232B324e70e815a424A95b03

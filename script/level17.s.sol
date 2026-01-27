@@ -7,10 +7,7 @@ import {Recovery, SimpleToken, Hack} from "../src/level17.sol";
 contract Level17Script is Script {
     function run(address instanceAddress) external {
         Recovery target = Recovery(instanceAddress);
-        address simpleTokenAddress = vm.computeCreateAddress(
-            instanceAddress,
-            1
-        );
+        address simpleTokenAddress = vm.computeCreateAddress(instanceAddress, 1);
         console.log("address: ", instanceAddress);
         console.log("address: ", simpleTokenAddress);
 

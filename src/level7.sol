@@ -9,7 +9,8 @@ contract Force {
     /~____  =ø= /
     (______)__m_m)
                    */
-}
+
+    }
 
 contract Hack {
     constructor(address payable _target) payable {

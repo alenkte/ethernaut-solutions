@@ -23,10 +23,7 @@ contract Level18Script is Script {
         uint256 result = abi.decode(data, (uint256));
         console.log("Solver contract returns: ", result);
 
-        console.log(
-            "Attack successful: ",
-            result == 42 && solverAfter != address(0)
-        );
+        console.log("Attack successful: ", result == 42 && solverAfter != address(0));
     }
 }
 //forge script script/level18.s.sol:Level18Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account yourkey --sig "run(address)" your instance address

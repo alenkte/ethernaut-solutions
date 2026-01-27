@@ -16,10 +16,7 @@ contract level17Test is Test {
     function testSolvesLeve17() public {
         address hacker = makeAddr("hacker");
 
-        address simpleTokenAddress = vm.computeCreateAddress(
-            address(target),
-            1
-        );
+        address simpleTokenAddress = vm.computeCreateAddress(address(target), 1);
         console.log("address: ", simpleTokenAddress);
 
         SimpleToken token = SimpleToken(payable(simpleTokenAddress));
