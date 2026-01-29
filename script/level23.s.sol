@@ -37,4 +37,4 @@ contract Level23Script is Script {
         }
     }
 }
-//forge script script/level23.s.sol:Level23Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account mytestkey --sig "run(address)" 0x0A2f768FA0ab98c800A1dbe2b9B8E9A633503bB9
+//forge script script/level23.s.sol:Level23Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account yourkey --sig "run(address)" your instance address
