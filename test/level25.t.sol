@@ -10,7 +10,7 @@ contract level25Test is Test {
         0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
 
     function setUp() public {
-        vm.createSelectFork("SEPOLIA", 4000000);
+        vm.createSelectFork("SEPOLIA");
         address instanceAddress = vm.envAddress("INSTANCE_AD");
         target = IMotorbike(instanceAddress);
     }
@@ -20,7 +20,7 @@ contract level25Test is Test {
         address implementation = address(
             uint160(uint256(vm.load(address(target), SLOT)))
         );
-
+        console.log("Implementation:", implementation);
         uint256 codeSizeBefore;
         assembly {
             codeSizeBefore := extcodesize(implementation)
@@ -36,9 +36,9 @@ contract level25Test is Test {
         assembly {
             codeSizeAfter := extcodesize(implementation)
         }
-
+        console.log("Implementation:", implementation);
         console.log("Code size before:", codeSizeBefore);
         console.log("Code size after:", codeSizeAfter);
     }
 }
-//INSTANCE_AD=0x2493C22524262C7E7c16b10722e802d75d160e9b forge test --mt testSolvesLeve25 -vvv
+//INSTANCE_AD=0xC5b25506D5824229936A487143894573f1c61540 forge test --mt testSolvesLeve25 -vvv
