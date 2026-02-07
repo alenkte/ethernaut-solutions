@@ -55,4 +55,4 @@ contract Level31Script is Script {
         );
     }
 }
-//forge script script/level31.s.sol:Level31Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account mytestkey --sig "run(address,address)" 0x6255c43C132892747AE5AA37B1f7D25C8c781acd 0x0ADf707838CDc0aBd5Cc361A9C680CEe4487F148
+//forge script script/level31.s.sol:Level31Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account yourkey --sig "run(address,address)" your instance address your key
