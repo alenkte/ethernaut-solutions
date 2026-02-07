@@ -26,4 +26,4 @@ contract Level30Script is Script {
         console.log("Attack successful:", commanderAfter != address(0));
     }
 }
-//forge script script/level30.s.sol:Level30Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account yourkey --sig "run(address)" your instance address
+//forge script script/level30.s.sol:Level30Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account mytestkey --sig "run(address)" 0x786b68afDbd217308189b967D098cAd137d98691
