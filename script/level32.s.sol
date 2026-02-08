@@ -22,4 +22,4 @@ contract Level32Script is Script {
         console.log("Attack successful:", controllerAfter == address(0));
     }
 }
-//forge script script/level32.s.sol:Level32Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account mytestkey --sig "run(address,address)" 0x261BE9fE9F4f2643D0596132A6Af7DAC625580c9 0x0ADf707838CDc0aBd5Cc361A9C680CEe4487F148
+//forge script script/level32.s.sol:Level32Script --rpc-url $SEPOLIA_RPC_URL --broadcast --account yourkey --sig "run(address,address)" your instanse your wallet address
