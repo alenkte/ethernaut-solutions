@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Hack, MagicAnimalCarousel} from "../src/level33.sol";
+import {MagicAnimalCarousel} from "../src/level33.sol";
 
 contract Level33Script is Script {
     function run(address instanceAddress, address sender) external {
